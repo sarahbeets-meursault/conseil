@@ -1,5 +1,5 @@
 {
-  "_aide": "Règles pour classer chaque campagne en interne ou externe. Une campagne dont le titre ou l'objet contient un des mots de title_contains, ou envoyée à une des audiences listées, prend ce type. Sinon elle prend le type par défaut. Pour forcer une campagne précise, ajoute son identifiant Mailchimp dans overrides.",
+  "_aide": "Le plus simple est de commencer le nom de la campagne dans Mailchimp par « Interne » ou « Externe » (par exemple « Interne - La Vie de Meursault octobre » ou « [Externe] Meursault Insights »). Ce préfixe décide du classement et n'apparaît pas sur le site. Sans préfixe, les règles ci-dessous s'appliquent en secours, puis le type par défaut. Pour forcer une campagne précise, ajoute son identifiant Mailchimp dans overrides.",
   "interne": {
     "title_contains": [
       "La Vie de Meursault",

@@ -7,6 +7,7 @@ Variables d'environnement :
 import base64
 import json
 import os
+import re
 import sys
 import urllib.request
 from datetime import datetime, timezone
@@ -26,10 +27,23 @@ def api(path, key):
         return json.load(r)
 
 
+PREFIX = re.compile(r"^\s*[\[(]?\s*(interne|externe)\b\s*[\])]?\s*[-–—:|/]*\s*", re.IGNORECASE)
+
+
+def split_prefix(name):
+    """« Interne - Titre », « [EXTERNE] Titre », « externe : Titre » -> (type, Titre)"""
+    m = PREFIX.match(name or "")
+    if not m:
+        return None, name
+    return m.group(1).lower(), name[m.end():].strip() or name
+
+
 def classify(c, cfg):
     overrides = cfg.get("overrides", {})
     if c["id"] in overrides:
         return overrides[c["id"]]
+    if c.get("prefix_type"):
+        return c["prefix_type"]
     for kind in ("interne", "externe"):
         rule = cfg.get(kind, {})
         title = (c["title"] + " " + c["subject"]).lower()
@@ -87,7 +101,9 @@ def main():
         c["clicks_unique"] = min(c["clicks_unique"], delivered)
         c["open_rate"] = round(c["opens_unique"] / delivered, 4) if delivered else 0
         c["click_rate"] = round(c["clicks_unique"] / delivered, 4) if delivered else 0
+        c["prefix_type"], c["title"] = split_prefix(c["title"])
         c["type"] = classify(c, cfg)
+        del c["prefix_type"]
         campaigns.append(c)
 
     campaigns.sort(key=lambda c: c["send_time"])
