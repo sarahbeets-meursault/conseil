@@ -1,11 +1,19 @@
 {
   "_aide": "Règles pour classer chaque campagne en interne ou externe. Une campagne dont le titre ou l'objet contient un des mots de title_contains, ou envoyée à une des audiences listées, prend ce type. Sinon elle prend le type par défaut. Pour forcer une campagne précise, ajoute son identifiant Mailchimp dans overrides.",
   "interne": {
-    "title_contains": ["La Vie de Meursault", "newsletter interne", "[interne]"],
+    "title_contains": [
+      "La Vie de Meursault",
+      "newsletter interne",
+      "[interne]",
+      "Murcia",
+      "chez Meursault"
+    ],
     "audiences": []
   },
   "externe": {
-    "title_contains": ["Meursault Insights"],
+    "title_contains": [
+      "Meursault Insights"
+    ],
     "audiences": []
   },
   "default": "externe",

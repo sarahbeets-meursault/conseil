@@ -81,6 +81,12 @@ def main():
             "unsubs": r.get("unsubscribed", 0),
             "abuse": r.get("abuse_reports", 0),
         }
+        # Mailchimp peut compter plus d'ouvertures uniques que d'emails délivrés
+        # (transferts, protection Apple Mail), on plafonne donc à 100 %
+        c["opens_unique"] = min(c["opens_unique"], delivered)
+        c["clicks_unique"] = min(c["clicks_unique"], delivered)
+        c["open_rate"] = round(c["opens_unique"] / delivered, 4) if delivered else 0
+        c["click_rate"] = round(c["clicks_unique"] / delivered, 4) if delivered else 0
         c["type"] = classify(c, cfg)
         campaigns.append(c)
 

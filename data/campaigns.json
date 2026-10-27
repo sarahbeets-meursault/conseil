@@ -11,15 +11,15 @@
       "sent": 8,
       "delivered": 8,
       "bounces": 0,
-      "opens_unique": 9,
+      "opens_unique": 8,
       "opens_total": 71,
-      "open_rate": 1.125,
+      "open_rate": 1.0,
       "clicks_unique": 0,
       "clicks_total": 0,
-      "click_rate": 0,
+      "click_rate": 0.0,
       "unsubs": 0,
       "abuse": 0,
-      "type": "externe"
+      "type": "interne"
     },
     {
       "id": "75897219f1",
@@ -54,10 +54,10 @@
       "open_rate": 0.75,
       "clicks_unique": 0,
       "clicks_total": 0,
-      "click_rate": 0,
+      "click_rate": 0.0,
       "unsubs": 0,
       "abuse": 0,
-      "type": "externe"
+      "type": "interne"
     },
     {
       "id": "7af63058b4",
@@ -76,7 +76,7 @@
       "click_rate": 0.0435,
       "unsubs": 0,
       "abuse": 0,
-      "type": "externe"
+      "type": "interne"
     }
   ]
 }
