@@ -1,6 +1,6 @@
 # Statistiques newsletters Meursault Conseil
 
-Tableau de bord des newsletters internes et externes du cabinet, dans la DA Meursault. Les chiffres viennent de Mailchimp et se mettent à jour automatiquement chaque matin.
+Tableau de bord des newsletters internes et externes du cabinet, dans la DA Meursault. Les chiffres viennent de Mailchimp et se mettent à jour automatiquement le 1er de chaque mois.
 
 ## Mise en route (à faire une seule fois)
 
@@ -9,7 +9,7 @@ Tableau de bord des newsletters internes et externes du cabinet, dans la DA Meur
 3. **Activer le site** dans Settings, Pages, Source « Deploy from a branch », branche `main` et dossier `/ (root)`.
 4. **Lancer une première mise à jour** dans l'onglet Actions, « Mise à jour des statistiques Mailchimp » puis « Run workflow ».
 
-Ensuite tout est automatique chaque jour vers 6h.
+Ensuite tout est automatique le 1er de chaque mois vers 6h, et le bouton « Run workflow » permet de forcer une mise à jour à tout moment.
 
 ## Classer les campagnes en interne ou externe
 
