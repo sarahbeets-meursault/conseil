@@ -1,0 +1,25 @@
+{
+  "updated": "2026-10-27T11:00+00:00",
+  "source": "export-csv",
+  "campaigns": [
+    {
+      "id": "75897219f1",
+      "title": "Dans les banques, les pratiques évoluent",
+      "subject": "Dans les banques, les pratiques évoluent",
+      "audience": "",
+      "send_time": "2026-09-30T05:03:00+00:00",
+      "sent": 76,
+      "delivered": 65,
+      "bounces": 11,
+      "opens_unique": 46,
+      "opens_total": 67,
+      "open_rate": 0.7077,
+      "clicks_unique": 0,
+      "clicks_total": 0,
+      "click_rate": 0,
+      "unsubs": 1,
+      "abuse": 0,
+      "type": "externe"
+    }
+  ]
+}

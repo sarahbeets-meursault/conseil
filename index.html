@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statistiques newsletters | Meursault Conseil</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <img src="assets/logo.svg" alt="Meursault Conseil" class="logo">
+  </div>
+  <div class="heading">
+    <p class="kick">Tableau de bord emailing</p>
+    <h1>Statistiques <em>newsletters</em></h1>
+    <p class="upd" id="updated"></p>
+  </div>
+  <nav class="filter" id="filter" aria-label="Filtrer les campagnes">
+    <button data-f="all" class="on">Toutes</button>
+    <button data-f="interne">Internes</button>
+    <button data-f="externe">Externes</button>
+  </nav>
+</header>
+
+<main>
+  <section class="kpis" id="kpis"></section>
+
+  <section class="grid">
+    <article class="card wide">
+      <div class="ch"><span class="num">01.</span><span class="ct">Taux d'ouverture et de clic dans le temps</span></div>
+      <div id="chart-time" class="chart"></div>
+      <div class="legend" id="legend-time"></div>
+    </article>
+
+    <article class="card">
+      <div class="ch"><span class="num">02.</span><span class="ct">Délivrabilité cumulée</span></div>
+      <div id="chart-donut" class="chart center"></div>
+    </article>
+
+    <article class="card">
+      <div class="ch"><span class="num">03.</span><span class="ct">Interne et externe comparées</span></div>
+      <div id="chart-compare" class="chart"></div>
+    </article>
+
+    <article class="card wide">
+      <div class="ch"><span class="num">04.</span><span class="ct">Campagne par campagne</span></div>
+      <div id="chart-bars" class="chart"></div>
+      <div class="legend">
+        <span><i style="background:var(--ink)"></i>Ouverture</span>
+        <span><i style="background:var(--gold)"></i>Clic</span>
+        <span><i style="background:var(--tan)"></i>Rebond</span>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="assets/logo.svg" alt="" class="flogo">
+  <span>Données issues de Mailchimp, mises à jour automatiquement chaque matin</span>
+</footer>
+
+<div class="tip" id="tip"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
