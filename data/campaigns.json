@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T13:48+00:00",
+  "updated": "2026-11-01T05:54+00:00",
   "source": "mailchimp-api",
   "campaigns": [
     {
@@ -68,15 +68,34 @@
       "sent": 23,
       "delivered": 23,
       "bounces": 0,
-      "opens_unique": 15,
-      "opens_total": 26,
-      "open_rate": 0.6522,
+      "opens_unique": 17,
+      "opens_total": 31,
+      "open_rate": 0.7391,
       "clicks_unique": 1,
       "clicks_total": 4,
       "click_rate": 0.0435,
       "unsubs": 0,
       "abuse": 0,
       "type": "interne"
+    },
+    {
+      "id": "4e52a2f540",
+      "title": "Nouveau talent à bord !",
+      "subject": "Nouveau talent à bord !",
+      "audience": "TEAM CO",
+      "send_time": "2026-10-27T15:43:08+00:00",
+      "sent": 23,
+      "delivered": 23,
+      "bounces": 0,
+      "opens_unique": 14,
+      "opens_total": 37,
+      "open_rate": 0.6087,
+      "clicks_unique": 0,
+      "clicks_total": 0,
+      "click_rate": 0.0,
+      "unsubs": 0,
+      "abuse": 0,
+      "type": "externe"
     }
   ]
 }
